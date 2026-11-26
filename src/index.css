@@ -48,6 +48,8 @@ html.lenis, html.lenis body { height: auto; }
 .sunrise-text { background: linear-gradient(90deg, #98141f, #c23028 30%, #ee763b 70%, #f08a1c); -webkit-background-clip: text; background-clip: text; color: transparent; text-shadow: none !important; }
 .on-navy .sunrise-text { background: linear-gradient(90deg, #ee763b, #f7941d 40%, #f9c910 70%, #eeff42); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
+.over-film { --color-bone: #ffffff; --color-blue: #eeff42; }
+
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: .6em;
   min-height: 52px; padding: 0 28px; border-radius: 999px;
@@ -63,7 +65,7 @@ html.lenis, html.lenis body { height: auto; }
 :focus-visible { outline: 2px solid var(--color-blue); outline-offset: 3px; }
 
 /* hero legibility on the light film: soft white glow behind navy type */
-.tshadow { text-shadow: 0 0 18px rgba(246,252,253,.85), 0 0 48px rgba(246,252,253,.7); }
+.tshadow { text-shadow: 0 1px 2px rgba(3,20,31,.9), 0 3px 18px rgba(3,20,31,.75); }
 .tshadow .btn { text-shadow: none; }
 
 .grain::after {
@@ -72,6 +74,10 @@ html.lenis, html.lenis body { height: auto; }
   animation: grain 8s steps(8) infinite;
 }
 @keyframes grain { 0%{transform:translate(0,0)} 25%{transform:translate(-3%,2%)} 50%{transform:translate(2%,-3%)} 75%{transform:translate(-2%,-1%)} 100%{transform:translate(0,0)} }
+/* thumb-sized tap targets on touch screens and phones */
+@media (pointer: coarse), (max-width: 767px) {
+  footer ul a, .svc a, #contact dd a { display: inline-flex; align-items: center; min-height: 44px; }
+}
 @keyframes spin-slow { to { transform: rotate(360deg); } }
 .spin-slow { animation: spin-slow 26s linear infinite; }
 @keyframes hr-dot { 0%,100% { opacity: .22; } 8% { opacity: 1; } 30% { opacity: .22; } }

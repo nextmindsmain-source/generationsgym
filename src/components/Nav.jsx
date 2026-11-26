@@ -14,7 +14,7 @@ export default function Nav() {
     return () => removeEventListener('scroll', on)
   }, [])
   return (
-    <header className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${solid || open ? 'bg-ink/85 backdrop-blur-md' : ''}`}>
+    <header className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${solid || open ? 'bg-ink/85 backdrop-blur-md' : 'over-film'}`}>
       <nav className="wrap flex h-[76px] items-center justify-between" aria-label="Main">
         <a href="#top" className="flex items-center gap-3" aria-label="Generations, home">
           <img src="/img/logo-square.png" alt="" className="h-10 w-auto" />

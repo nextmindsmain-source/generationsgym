@@ -82,7 +82,7 @@ export function Manifesto() {
           </div>
 
           {/* photos */}
-          <div className="mphotos relative mx-auto w-full max-w-[560px] pb-16 lg:col-span-5 lg:max-w-none">
+          <div className="mphotos relative mx-auto w-full max-w-[560px] sm:pb-16 lg:col-span-5 lg:max-w-none">
             <div className="mphoto relative aspect-[4/5] overflow-hidden rounded-[36px] bg-ink-3">
               <img src="/img/real-gym-weights.jpg" alt="Dumbbell rack and benches on the Generations gym floor" loading="lazy" className="mphoto-img absolute inset-0 h-[114%] w-full -translate-y-[7%] object-cover" />
               <div className="absolute inset-x-0 bottom-0 h-1/3" style={{ background: 'linear-gradient(to top, rgba(6,45,67,.55), rgba(6,45,67,0))' }} />
@@ -121,7 +121,7 @@ export function Manifesto() {
             </div>
           </a>
 
-          <article className="group relative flex min-h-[300px] flex-col justify-between overflow-hidden rounded-[32px] bg-ink-3 p-7 transition-transform duration-500 hover:-translate-y-2">
+          <article className="group relative flex min-h-[300px] flex-col justify-between gap-8 overflow-hidden rounded-[32px] bg-ink-3 p-7 transition-transform duration-500 hover:-translate-y-2">
             <ul className="flex flex-wrap gap-2" aria-label="What is included">
               {['Gym', 'Aquatic', 'Group', 'Personal', 'Performance', 'Lessons'].map((t) => (
                 <li key={t} className="mono rounded-full border border-navy/25 px-3 py-1.5 text-[11px] text-navy transition-colors duration-300 hover:bg-navy hover:text-white">{t}</li>
